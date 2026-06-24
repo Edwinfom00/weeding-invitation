@@ -23,7 +23,6 @@ export function HomePageClient({
   config,
   galleryPhotos,
   initialGuestbookEntries,
-  initialMusicTracks,
   initialTimelineEvents,
 }: HomePageClientProps) {
   const [isOpened, setIsOpened] = useState(false)
@@ -108,7 +107,7 @@ export function HomePageClient({
             <nav className="hidden lg:flex items-center gap-8 text-[11px] font-sans tracking-[0.2em] uppercase font-medium">
               <button onClick={() => scrollTo('our-story-section')} className="hover:text-gold cursor-pointer transition-colors">Notre Histoire</button>
               <button onClick={() => scrollTo('schedule-timeline-section')} className="hover:text-gold cursor-pointer transition-colors">Le Programme</button>
-              <button onClick={() => scrollTo('dresscode-section')} className="hover:text-gold cursor-pointer transition-colors">Code Couleur</button>
+              {/* <button onClick={() => scrollTo('dresscode-section')} className="hover:text-gold cursor-pointer transition-colors">Code Couleur</button> */}
               <button onClick={() => scrollTo('travel-guide-section')} className="hover:text-gold cursor-pointer transition-colors">Guide Provence</button>
               <button onClick={() => scrollTo('rsvp-section')} className="hover:text-gold cursor-pointer transition-colors font-semibold text-rose">Répondre (RSVP)</button>
               <button onClick={() => scrollTo('guestbook-section')} className="hover:text-gold cursor-pointer transition-colors">Livre d'Or</button>
@@ -141,11 +140,11 @@ export function HomePageClient({
 
           <FloralDivider className="bg-parchment" />
 
-          <SwatchBoard
+          {/* <SwatchBoard
             title={config.dressCodeTitle}
             description={config.dressCodeDescription}
             swatches={config.dressCodeSwatches}
-          />
+          /> */}
 
           <GallerySection photos={galleryPhotos} />
 
@@ -157,7 +156,7 @@ export function HomePageClient({
 
           <GuestbookPage initialEntries={mappedGuestbookEntries} />
 
-          <MusicSection initialTracks={initialMusicTracks} />
+          <MusicSection />
 
           <footer className="bg-cream pt-16 pb-12 px-6 border-t border-taupe/40 text-center text-charcoal select-none">
             <div className="text-gold/40 w-12 h-12 mx-auto mb-4">
